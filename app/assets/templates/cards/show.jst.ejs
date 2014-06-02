@@ -1,0 +1,9 @@
+<div class="well card-element" id="list_<%= card.id %>">
+  <div class="panel-header">
+    <button type="button" class="close delete-card" style="display:none" data-id="<%= card.id %>">&times;</button>
+  </div>
+  <strong><%= card.escape("title") %></strong>
+  <%= card.escape("description") %><br>
+  Rank: <%= card.escape("rank") %><br>
+  List ID: <%= card.escape("list_id") %>
+</div>
