@@ -3,19 +3,31 @@
 
   <h1>Sign In</h1>
 
-  <form action="<%= session_url %>" method="post">
+  <form action="<%= session_url %>" method="post" id="login-form">
     <%= auth_token_input %>
     <label>
       Email<br>
-      <input type="text" name="user[email]">
+      <input type="text" name="user[email]" id="login-name">
     </label>
     <br>
     <label>
       Password<br>
-      <input type="password" name="user[password]">
+      <input type="password" name="user[password]" id="login-password">
     </label>
     <br>
     <input type="submit" class="btn btn-primary" value="Login">
     <a href="<%= new_user_url %>">New to Trellino?</a>
   </form>
+  <br>
+  <button class="btn btn-success" id="guest-login-button">Guest Login</button>
 </div>
+
+<script type="text/javascript">
+$("#guest-login-button").on("click", function(event) {
+  event.preventDefault();
+  $("#login-name").val("fred");
+  $("#login-password").val("password");
+  $("#login-form").submit();
+});
+
+</script>

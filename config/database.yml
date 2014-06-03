@@ -1,13 +1,20 @@
-development:
-  adapter: sqlite3
-  database: db/trellino_development
-  host: localhost
+# PostgreSQL. Versions 8.2 and up are supported.
+default: &default
+  adapter: postgresql
+  encoding: unicode
   pool: 5
-  timeout: 5000
+
+development:
+  <<: *default
+  database: trello_development
+  host: localhost
 
 test:
-  adapter: sqlite3
-  database: db/trellino_test
-  host: localhost
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: trello_test
+
+production:
+  <<: *default
+  database: trello_production
+  username: trello
+  password: <%= ENV['BOOKFRIENDS_DATABASE_PASSWORD'] %>
