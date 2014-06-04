@@ -17,4 +17,4 @@ production:
   <<: *default
   database: trello_production
   username: trello
-  password: <%= ENV['BOOKFRIENDS_DATABASE_PASSWORD'] %>
+  password: <%= ENV['TRELLO_DATABASE_PASSWORD'] %>
