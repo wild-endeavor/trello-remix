@@ -16,5 +16,5 @@ test:
 production:
   <<: *default
   database: trello_production
-  username: trello
-  password: <%= ENV['TRELLO_DATABASE_PASSWORD'] %>
+  # username: trello
+  # password: <%= ENV['TRELLO_DATABASE_PASSWORD'] %>
