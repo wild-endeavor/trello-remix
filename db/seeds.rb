@@ -7,7 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 users = User.create!([
-  { email: "user", password: "password" }
+  { email: "user", password: "password" },
+  { email: "fred", password: "password" }
 ])
 
 boards = Board.create!([
