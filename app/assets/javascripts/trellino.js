@@ -6,6 +6,8 @@ window.Trellino = {
   initialize: function() {
 
     var boards = Trellino.Collections.boards = new Trellino.Collections.Boards();
+    // These are temporary variables meant to hold thing to
+    // the global scope.
     window.qqq = boards;
     window.xyz = undefined;
     boards.fetch({
